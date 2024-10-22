@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+</head>
+<body>
+
+    <h1>Contact Information</h1>
+
+    <form action="/submit" method="POST">
+        <!-- Name Field -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <!-- Email Field with validation for required and format -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required
+               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+               title="Please enter a valid email address. Example: name@example.com"><br><br>
+
+        <!-- Phone Number Field with validation for numeric input only -->
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required
+               pattern="[0-9]{10}" 
+               title="Please enter a 10-digit phone number with numeric values only"><br><br>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>

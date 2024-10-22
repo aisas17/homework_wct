@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Drawing</title>
+</head>
+<body>
+
+    <h1>Canvas Drawing: Rectangle, Circle, and Line</h1>
+
+    <!-- Canvas element where the drawing will appear -->
+    <canvas id="myCanvas" width="500" height="300" style="border:1px solid #000;"></canvas>
+
+    <script>
+        // Get the canvas element and context for drawing
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // Draw a rectangle
+        ctx.fillStyle = "#FF0000";  // Set fill color to red
+        ctx.fillRect(50, 50, 150, 100);  // Draw rectangle (x, y, width, height)
+
+        // Draw a circle
+        ctx.beginPath();
+        ctx.arc(300, 100, 50, 0, 2 * Math.PI);  // Draw circle (x, y, radius, start angle, end angle)
+        ctx.fillStyle = "#00FF00";  // Set fill color to green
+        ctx.fill();
+        ctx.closePath();
+
+        // Draw a line
+        ctx.beginPath();
+        ctx.moveTo(50, 200);  // Starting point (x, y)
+        ctx.lineTo(400, 250);  // Ending point (x, y)
+        ctx.strokeStyle = "#0000FF";  // Set stroke color to blue
+        ctx.lineWidth = 5;  // Set line width
+        ctx.stroke();  // Draw the line
+        ctx.closePath();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Form</title>
+</head>
+<body>
+    <h2>My Favorite Hobby: Reading</h2>
+    <p>I love getting lost in a good book and exploring new worlds. There's something magical about escaping reality for a while and immersing myself in a story.</p>
+
+    <h3>Related Video</h3>
+    <div id="video-container">
+        <video id="video" controls>
+            <source src="your_video_file.mp4" type="video/mp4">
+            Your browser does not support the video element.
+        </video>
+        <div id="video-controls">
+            <button id="play-pause-btn">Play/Pause</button>
+            <input type="range" id="volume-control" min="0" max="1" step="0.01" value="1">
+        </div>
+    </div>
+
+    <h3>Related Audio</h3>
+    <div id="audio-container">
+        <audio id="audio" controls>
+            <source src="your_audio_file.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <div id="audio-controls">
+            <button id="play-pause-btn">Play/Pause</button>
+            <input type="range" id="volume-control" min="0" max="1" step="0.01" value="1">
+        </div>
+    </div>
+
+    <script>
+        const video = document.getElementById('video');
+        const audio = document.getElementById('audio');
+        const playPauseBtn = document.getElementById('play-pause-btn');
+        const volumeControl = document.getElementById('volume-control');
+
+        playPauseBtn.addEventListener('click', () => {
+            if (video.paused) {
+                video.play();
+                playPauseBtn.textContent = 'Pause';
+            } else {
+                video.pause();
+                playPauseBtn.textContent = 'Play';
+            }
+        });
+
+        volumeControl.addEventListener('input', () => {
+            video.volume = volumeControl.value;
+            audio.volume = volumeControl.value;
+        });
+    </script>
+</body>
+</html>

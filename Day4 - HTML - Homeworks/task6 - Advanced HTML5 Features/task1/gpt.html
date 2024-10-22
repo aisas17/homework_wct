@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Color Selector</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            transition: background-color 0.5s ease; /* Smooth transition for background color */
+        }
+        #colorPicker {
+            margin: 20px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Select Your Theme Color</h1>
+    <p>Choose a background color from the options below:</p>
+
+    <!-- Color selection buttons -->
+    <div id="colorPicker">
+        <button onclick="setColor('lightblue')">Light Blue</button>
+        <button onclick="setColor('lightgreen')">Light Green</button>
+        <button onclick="setColor('lightcoral')">Light Coral</button>
+        <button onclick="setColor('lightyellow')">Light Yellow</button>
+        <button onclick="setColor('white')">Reset to Default</button>
+    </div>
+
+    <script>
+        // Function to set the background color and save it in localStorage
+        function setColor(color) {
+            document.body.style.backgroundColor = color;  // Set the background color
+            localStorage.setItem('backgroundColor', color);  // Save the color in localStorage
+        }
+
+        // Function to apply the saved color from localStorage when the page loads
+        function applySavedColor() {
+            const savedColor = localStorage.getItem('backgroundColor');  // Get the saved color
+            if (savedColor) {
+                document.body.style.backgroundColor = savedColor;  // Apply the saved color
+            }
+        }
+
+        // Call the function to apply the saved color when the page loads
+        window.onload = applySavedColor;
+    </script>
+
+</body>
+</html>

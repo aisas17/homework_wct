@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Webpage</title>
+</head>
+<body>
+    <h1>My First Webpage</h1>
+    
+    <p>One of my favorite hobbies is hiking. It allows me to explore nature, stay active, and clear my mind after a busy week.</p>
+    
+    <h2>3 Things I Enjoy About Hiking</h2>
+    <ul>
+        <li>Discovering new trails and scenic views</li>
+        <li>Getting fresh air and exercise</li>
+        <li>Feeling connected with nature and wildlife</li>
+    </ul>
+</body>
+</html>
